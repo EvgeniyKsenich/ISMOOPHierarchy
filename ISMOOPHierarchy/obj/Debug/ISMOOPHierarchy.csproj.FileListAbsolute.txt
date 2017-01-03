@@ -1,0 +1,6 @@
+c:\users\zzzzz\onedrive\документы\visual studio 2015\Projects\ISMOOPHierarchy\ISMOOPHierarchy\bin\Debug\ISMOOPHierarchy.exe.config
+c:\users\zzzzz\onedrive\документы\visual studio 2015\Projects\ISMOOPHierarchy\ISMOOPHierarchy\bin\Debug\ISMOOPHierarchy.exe
+c:\users\zzzzz\onedrive\документы\visual studio 2015\Projects\ISMOOPHierarchy\ISMOOPHierarchy\bin\Debug\ISMOOPHierarchy.pdb
+c:\users\zzzzz\onedrive\документы\visual studio 2015\Projects\ISMOOPHierarchy\ISMOOPHierarchy\obj\Debug\ISMOOPHierarchy.csprojResolveAssemblyReference.cache
+c:\users\zzzzz\onedrive\документы\visual studio 2015\Projects\ISMOOPHierarchy\ISMOOPHierarchy\obj\Debug\ISMOOPHierarchy.exe
+c:\users\zzzzz\onedrive\документы\visual studio 2015\Projects\ISMOOPHierarchy\ISMOOPHierarchy\obj\Debug\ISMOOPHierarchy.pdb
