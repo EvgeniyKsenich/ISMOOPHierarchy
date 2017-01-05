@@ -14,7 +14,9 @@ namespace ISMOOPHierarchy
             FACULT FT = new FACULT();
             Exam EX = new Exam();
             Liberty LB = new Liberty();
-            LB.MUNE();
+            Hospital HS = new Hospital();
+            HS.MENU();
+            //LB.MUNE();
             //EX.Menu();
             //FT.MENU();
            // BN.Menu();

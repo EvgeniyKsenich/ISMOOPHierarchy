@@ -8,7 +8,7 @@ namespace ISMOOPHierarchy
 {
     class Reader:Human
     {
-        public int[] book = new int[0];
+        protected int[] book = new int[0];
         public Reader(string name, string surname):base(name, surname)
         {
 

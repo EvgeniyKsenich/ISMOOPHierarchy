@@ -48,10 +48,14 @@
     <Compile Include="BANK_Administrator.cs" />
     <Compile Include="BANK_Client.cs" />
     <Compile Include="Book.cs" />
+    <Compile Include="ConsoleWriter.cs" />
+    <Compile Include="Doctor.cs" />
     <Compile Include="Exam.cs" />
     <Compile Include="FACULT.cs" />
+    <Compile Include="Hospital.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="IBank.cs" />
+    <Compile Include="Illnes.cs" />
     <Compile Include="Kurs.cs" />
     <Compile Include="Kurs_Archive.cs" />
     <Compile Include="Lib.cs" />
