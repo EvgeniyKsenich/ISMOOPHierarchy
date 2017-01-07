@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ISMOOPHierarchy
 {
-    class Kurs
+    class Kurs : ICloneable, IComparable<Kurs>
     {
         protected string course_name;
         protected int[] student_num = new int[0];
@@ -15,6 +15,21 @@ namespace ISMOOPHierarchy
         public Kurs(string name)
         {
             course_name = name;
+        }
+        protected int TD_L
+        {
+            get { return student_num.Length; }
+        }
+        protected int[] STnm
+        {
+            get { return student_num; }
+            set { student_num = value; }
+        }
+
+        protected int[] MR
+        {
+            get { return marks; }
+            set { marks = value; }
         }
 
         public void SetMarks()
@@ -63,6 +78,23 @@ namespace ISMOOPHierarchy
         {
             Console.WriteLine();
             for (int i = 0; i < student_num.Length; i++) Console.Write(student_num[i]+" ");
+        }
+
+        public object Clone()
+        {
+            Kurs tmp = new Kurs(this.Name);
+            tmp.STnm = this.STnm;
+            tmp.MR = this.MR;
+            return tmp;
+        }
+
+        public int CompareTo(Kurs other)
+        {
+            int cmp =   Name.CompareTo(other.Name);
+
+            if (cmp == 0) return TD_L.CompareTo(other.TD_L);
+            else
+                return cmp;
         }
     }
 }

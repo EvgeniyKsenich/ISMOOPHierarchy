@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ISMOOPHierarchy
 {
-    class Reader:Human
+    class Reader: Human, ICloneable, IComparable<Reader>
     {
         protected int[] book = new int[0];
         public Reader(string name, string surname):base(name, surname)
@@ -14,6 +14,12 @@ namespace ISMOOPHierarchy
 
         }
 
+        protected int[] BK
+        {
+            get { return book; }
+            set { book = value; }
+        }
+            
         public void AddInBook(int nm)
         {
             if (!book.Contains(nm))
@@ -24,6 +30,28 @@ namespace ISMOOPHierarchy
                 book[book.Length - 1] = nm;
             }
         }
+
+        public int LENTH_B
+        {
+            get { return book.Length; }
+        }
+
+        public int CompareTo(Reader other)
+        {
+            Human tmp = new Human(other.Name, other.Surname);
+            int cmp =  base.CompareTo(tmp);
+
+            if (cmp == 0) return LENTH_B.CompareTo(other.LENTH_B);
+            else
+                return cmp;
+        }
+        public object Clone()
+        {
+            Reader tmp = new Reader(this.name, this.surname);
+            tmp.BK = this.BK;
+            return tmp;
+        }
+
         private void CopyToMain(int[] tmp)
         {
             int lic = tmp.Length;

@@ -6,12 +6,21 @@ using System.Threading.Tasks;
 
 namespace ISMOOPHierarchy
 {
-    class Illnes:Human
+    class Illnes:Human, ICloneable, IComparable<Illnes>
     {
         string[] ToDo = new string[0];
         public Illnes(string name, string surname):base(name, surname)
         {
 
+        }
+        protected string[] TD
+        {
+            get { return ToDo; }
+            set { ToDo = value; }
+        }
+        protected int TD_L
+        {
+            get { return ToDo.Length; }
         }
 
         public void AddInDoings(string nm)
@@ -46,5 +55,24 @@ namespace ISMOOPHierarchy
             }
         }
 
+
+
+
+
+        public object Clone()
+        {
+            Illnes tmp = new Illnes(this.Name, this.Surname);
+            tmp.TD = this.TD;
+            return tmp;
+        }
+        public int CompareTo(Illnes other)
+        {
+            Human tmp = new Human(other.Name, other.Surname);
+            int cmp = base.CompareTo(tmp);
+
+            if (cmp == 0) return TD_L.CompareTo(other.TD_L);
+            else
+                return cmp;
+        }
     }
 }

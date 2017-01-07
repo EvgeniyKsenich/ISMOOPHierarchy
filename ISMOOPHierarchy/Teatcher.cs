@@ -6,13 +6,19 @@ using System.Threading.Tasks;
 
 namespace ISMOOPHierarchy
 {
-    class Teatcher:Human
+    class Teatcher:Human, ICloneable, IComparable<Teatcher>
     {
         Kurs[] kr = new Kurs[0];
 
         public Teatcher(string name, string surname):base(name, surname)
         {
 
+        }
+
+        protected Kurs[] KR 
+        {
+            get { return kr; }
+            set { kr = value; }
         }
         public void StartCourse(string name)
         {
@@ -76,6 +82,28 @@ namespace ISMOOPHierarchy
             {
                 kr[i] = tmp[i];
             }
+        }
+        public int LENTH_B
+        {
+            get { return kr.Length; }
+        }
+
+
+        public object Clone()
+        {
+            Teatcher tmp = new Teatcher(this.Name, this.Surname);
+            tmp.KR = this.KR;
+            return tmp;
+        }
+
+        public int CompareTo(Teatcher other)
+        {
+            Human tmp = new Human(other.Name, other.Surname);
+            int cmp = base.CompareTo(tmp);
+
+            if (cmp == 0) return LENTH_B.CompareTo(other.LENTH_B);
+            else
+                return cmp;
         }
     }
 }

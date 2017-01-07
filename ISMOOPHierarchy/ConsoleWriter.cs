@@ -28,7 +28,7 @@ namespace ISMOOPHierarchy
             Console.WriteLine("Name:" + str.Name);
             Console.WriteLine("Surname:" + str.Surname);
         }
-        public static void AddPrint(this Book str)
+        public static void AddPrint(this Kurs str)
         {
             Console.WriteLine("Name:" + str.Name);
             string oout;

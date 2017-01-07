@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ISMOOPHierarchy
 {
-    class Human
+    class Human: ICloneable, IComparable<Human>
     {
         protected string name;
         protected string surname;
@@ -47,6 +47,21 @@ namespace ISMOOPHierarchy
         {
             Console.WriteLine("Name:" + Name);
             Console.WriteLine("Surname:" + Surname);
+        }
+
+        public object Clone()
+        {
+            Human tmp = new Human(this.name, this.surname);
+            return tmp;
+        }
+
+        public int CompareTo(Human other)
+        {
+            if (other == null) return 1;
+            if(this.Name != other.Name)
+                return Name.CompareTo(other.Name);
+            else
+                return Surname.CompareTo(other.Surname);
         }
     }
 }

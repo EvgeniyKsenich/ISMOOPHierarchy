@@ -6,12 +6,18 @@ using System.Threading.Tasks;
 
 namespace ISMOOPHierarchy
 {
-    class Lib:Human
+    class Lib:Human, ICloneable, IComparable<Lib>
     {
         public int[] blocked = new int[0];
         public Lib(string name, string surname):base(name, surname)
         {
 
+        }
+
+        public int[] BL
+        {
+            get { return blocked; }
+            set { blocked = value; }
         }
 
         public bool isBlocked(int nm)
@@ -36,6 +42,20 @@ namespace ISMOOPHierarchy
             {
                 blocked[i] = tmp[i];
             }
+        }
+
+
+
+        public object Clone()
+        {
+            Lib tmp = new Lib(this.Name, this.Surname);
+            tmp.BL = this.BL;
+            return tmp;
+        }
+        public int CompareTo(Lib other)
+        {
+            Human tmp = new Human(other.Name, other.Surname);
+            return base.CompareTo(tmp);
         }
     }
 }

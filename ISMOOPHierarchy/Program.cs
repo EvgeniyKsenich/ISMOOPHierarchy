@@ -15,11 +15,17 @@ namespace ISMOOPHierarchy
             Exam EX = new Exam();
             Liberty LB = new Liberty();
             Hospital HS = new Hospital();
-            HS.MENU();
+
+            Human hm = new Human("d","d");
+            Human hs = new Human("s", "s"); ;
+            hs = hm.Clone() as Human;
+            
+
+            //HS.MENU();
             //LB.MUNE();
             //EX.Menu();
             //FT.MENU();
-           // BN.Menu();
+            // BN.Menu();
             /*
             ---
             Спроектировать и реализовать классы для следующих моделей систем в одной программе (будут общие классы для разных систем). 

@@ -9,17 +9,17 @@ namespace ISMOOPHierarchy
     class Liberty
     {
         Reader[] red = new Reader[0];
-        Book[] books = new Book[0];
+        Kurs[] books = new Kurs[0];
         Lib lib = new Lib("l", "l");
 
         public Liberty()
         {
             red = new Reader[1];
             red[0] = new Reader("r", "r");
-            books = new Book[3];
-            books[0] = new Book("Carols", true);
-            books[1] = new Book("Miami", true);
-            books[2] = new Book("Storm", true);
+            books = new Kurs[3];
+            books[0] = new Kurs("Carols", true);
+            books[1] = new Kurs("Miami", true);
+            books[2] = new Kurs("Storm", true);
         }
 
         public void MUNE()
