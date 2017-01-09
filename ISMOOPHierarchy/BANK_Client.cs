@@ -8,6 +8,27 @@ namespace ISMOOPHierarchy
 {
     class BANK_Client:Human, IBank, ICloneable, IComparable<BANK_Client>
     {
+        public class MyComp_Default : IComparer<BANK_Client>
+        {
+            public int Compare(BANK_Client x, BANK_Client y)
+            {
+                return x.CompareTo(y);
+            }
+        }
+        public class MyComp_Suma : IComparer<BANK_Client>
+        {
+            public int Compare(BANK_Client x, BANK_Client y)
+            {
+                return x.Suma.CompareTo(y.Suma);
+            }
+        }
+        public class MyComp_Credit_Suma : IComparer<BANK_Client>
+        {
+            public int Compare(BANK_Client x, BANK_Client y)
+            {
+                return x.CrCr.CompareTo(y.CrCr);
+            }
+        }
         protected double suma;
         protected double credit_cart;
         protected int num;

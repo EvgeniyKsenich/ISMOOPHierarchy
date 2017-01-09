@@ -8,6 +8,29 @@ namespace ISMOOPHierarchy
 {
     class Reader: Human, ICloneable, IComparable<Reader>
     {
+        public class MyComp_Default : IComparer<Reader>
+        {
+            public int Compare(Reader x, Reader y)
+            {
+                return x.CompareTo(y); 
+            }
+        }
+        public class MyComp_Books_Count : IComparer<Reader>
+        {
+            public int Compare(Reader x, Reader y)
+            {
+                return x.LENTH_B.CompareTo(y.LENTH_B);
+            }
+        }
+        public class MyComp_Surname : IComparer<Reader>
+        {
+            public int Compare(Reader x, Reader y)
+            {
+                return x.Surname.CompareTo(y.Surname);
+            }
+        }
+
+
         protected int[] book = new int[0];
         public Reader(string name, string surname):base(name, surname)
         {

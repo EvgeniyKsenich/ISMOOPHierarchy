@@ -11,7 +11,11 @@ namespace ISMOOPHierarchy
         protected string course_name;
         protected int[] student_num = new int[0];
         protected int[] marks = new int[0];
-
+        
+        //public string Name
+        //{
+        //    get { return course_name; }
+        //}
         public Kurs(string name)
         {
             course_name = name;

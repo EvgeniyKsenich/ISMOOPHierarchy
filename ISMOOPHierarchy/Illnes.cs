@@ -8,6 +8,30 @@ namespace ISMOOPHierarchy
 {
     class Illnes:Human, ICloneable, IComparable<Illnes>
     {
+        public class MyComp_Default : IComparer<Illnes>
+        {
+            public int Compare(Illnes x, Illnes y)
+            {
+                return x.CompareTo(y);
+            }
+        }
+        public class MyComp_ToDo_Lenth : IComparer<Illnes>
+        {
+            public int Compare(Illnes x, Illnes y)
+            {
+                return x.TD_L.CompareTo(y.TD_L);
+            }
+        }
+        public class MyComp_Surname : IComparer<Illnes>
+        {
+            public int Compare(Illnes x, Illnes y)
+            {
+                return x.Surname.CompareTo(y.Surname);
+            }
+        }
+
+
+
         string[] ToDo = new string[0];
         public Illnes(string name, string surname):base(name, surname)
         {

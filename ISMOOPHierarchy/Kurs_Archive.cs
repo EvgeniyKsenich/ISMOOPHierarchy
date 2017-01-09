@@ -6,11 +6,24 @@ using System.Threading.Tasks;
 
 namespace ISMOOPHierarchy
 {
-    class Kurs_Archive
+    class Kurs_Archive:ICloneable, IComparable<Kurs_Archive>
     {
         Human[] tet = new Human[0];
         Kurs[] kr = new Kurs[0];
-
+        protected int Leanth
+        {
+            get { return tet.Length; }
+        }
+        public Kurs[] KR
+        {
+            set { kr = value; }
+            get { return kr; }
+        }
+        public Human[] TET
+        {
+            set { tet = value; }
+            get { return tet; }
+        }
         public void AddCourse(string name, Human hm, double mark)
         {
             Kurs[] tmp_client = kr;
@@ -46,6 +59,19 @@ namespace ISMOOPHierarchy
             {
                 tet[i] = tmp[i];
             }
+        }
+
+        public object Clone()
+        {
+            Kurs_Archive tmp = new Kurs_Archive();
+            tmp.TET = this.TET;
+            tmp.KR = this.KR;
+            return tmp;
+        }
+
+        public int CompareTo(Kurs_Archive other)
+        {
+            return other.Leanth.CompareTo(other.Leanth);
         }
     }
 }

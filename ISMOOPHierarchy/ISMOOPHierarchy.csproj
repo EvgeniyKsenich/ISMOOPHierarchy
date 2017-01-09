@@ -51,6 +51,7 @@
     <Compile Include="ConsoleWriter.cs" />
     <Compile Include="Doctor.cs" />
     <Compile Include="Exam.cs" />
+    <Compile Include="Extension.cs" />
     <Compile Include="FACULT.cs" />
     <Compile Include="Hospital.cs" />
     <Compile Include="Human.cs" />

@@ -16,16 +16,44 @@ namespace ISMOOPHierarchy
             Liberty LB = new Liberty();
             Hospital HS = new Hospital();
 
-            Human hm = new Human("d","d");
-            Human hs = new Human("s", "s"); ;
-            hs = hm.Clone() as Human;
-            
+
+            //Reader[] RD = new Reader[3];
+            //RD[2] = new Reader("Aname","ZSurname");
+            //RD[2].AddInBook(1);
+            //RD[2].AddInBook(2);
+            //RD[0] = new Reader("Bname","CSurname");
+            //RD[1] = new Reader("Cname","ASurname");
+            //RD[1].AddInBook(2);
+            //Array.Sort(RD);
+            //for(int i=0;i<RD.Length;i++)
+            //{
+            //    RD[i].AddPrint();
+            //    Console.WriteLine();
+            //}
+            //Console.WriteLine("=============================================");
+            //Array.Sort(RD, new Reader.MyComp_Books_Count());
+            //for (int i = 0; i < RD.Length; i++)
+            //{
+            //    RD[i].AddPrint();
+            //    Console.WriteLine();
+            //}
+            //Console.WriteLine("=============================================");
+            //Array.Sort(RD, new Reader.MyComp_Surname());
+            //for (int i = 0; i < RD.Length; i++)
+            //{
+            //    RD[i].AddPrint();
+            //    Console.WriteLine();
+            //}
+            //Human hm = new Human("d","d");
+            //Human hs = new Human("s", "s"); ;
+            //hs = hm.Clone() as Human;
+
 
             //HS.MENU();
             //LB.MUNE();
             //EX.Menu();
             //FT.MENU();
-            // BN.Menu();
+            //BN.Menu();
             /*
             ---
             Спроектировать и реализовать классы для следующих моделей систем в одной программе (будут общие классы для разных систем). 
